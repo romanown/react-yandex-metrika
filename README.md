@@ -52,7 +52,7 @@ ym('reachGoal', 'whateverGoal', {awesomeParameter: 42});
 render() {
     return null
   }
-}
+})
 ```
 
 ### Webvisor 2.0 support
