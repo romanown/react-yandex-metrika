@@ -43,8 +43,16 @@ Elsewhere, use the `ym` function:
 
 ```javascript
 import ym from 'react-yandex-metrika';
-ym('hit', '/cart');
+.....
+const HitListener = withRouter(class extends React.Component {
+componentWillReceiveProps(nextProps) {
+ym('hit', nextProps);
 ym('reachGoal', 'whateverGoal', {awesomeParameter: 42});
+}
+render() {
+    return null
+  }
+}
 ```
 
 ### Webvisor 2.0 support
